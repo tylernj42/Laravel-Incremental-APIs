@@ -15,10 +15,11 @@ class LessonsTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        foreach(range(1, 330) as $index){
+        foreach(range(1, 30) as $index){
             Lesson::create([
                 'title' => $faker->sentence(5),
-                'body' => $faker->paragraph(4)
+                'body' => $faker->paragraph(4),
+                'some_bool' => $faker->boolean()
             ]);
         }
     }
